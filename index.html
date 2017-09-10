@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>VueJs Demo</title>
+  </head>
+  <body>
+    <div id="app">
+      <h1>{{message}} > {{translatedMessage}}</h1>
+      <p>Counter = {{counter}}</p>
+      <button v-on:click="incrementCounter">+</button>
+      <button v-on:click="decrementCounter">-</button>
+      <select v-model="lang">
+        <option v-for="(lang, index) in langs.codes" v-bind:value="lang">{{langs.labels[index]}}</option>
+      </select>
+      <img v-bind:src="'./imgs/' + lang + '.png'" width="50px">
+    </div>
+    <script src="https://unpkg.com/vue"></script>
+    <script src="./app.js"></script>
+  </body>
+</html>
